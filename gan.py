@@ -225,8 +225,8 @@ class CycleGAN():
         imgs_B = self.data_loader.load_data(domain="B", batch_size=1, is_testing=True)
 
         # Demo (for GIF)
-        #imgs_A = self.data_loader.load_img('datasets/apple2orange/testA/n07740461_1541.jpg')
-        #imgs_B = self.data_loader.load_img('datasets/apple2orange/testB/n07749192_4241.jpg')
+        imgs_A = self.data_loader.load_img('datasets/apple2orange/testA/n07740461_1541.jpg')
+        imgs_B = self.data_loader.load_img('datasets/apple2orange/testB/n07749192_4241.jpg')
 
         # Translate images to the other domain
         fake_B = self.g_AB.predict(imgs_A)
